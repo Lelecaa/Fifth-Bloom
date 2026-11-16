@@ -1,11 +1,249 @@
+
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Produtos</title>
+
+    <title>Produtos | Fifth Bloom</title>
+
+    <!-- Fontes do projeto -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Arquivo de estilos -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Biblioteca de ícones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
+
 <body>
-    <h1>Página de produtos</h1>
+
+    <!-- Aviso superior -->
+    <div class="announcement">
+        Frete grátis em compras acima de R$ 199,00
+    </div>
+
+    <!-- Cabeçalho -->
+    <header class="header">
+
+        <a href="fifth.html" class="logo">Fifth Bloom<span>.</span></a>
+
+        <button class="menu-toggle" id="btn-menu" aria-label="Abrir menu">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+
+        <nav class="main-nav" id="main-nav">
+            <a href="fifth.html">Início</a>
+            <a href="produtos.html" class="active">Produtos</a>
+            <a href="fifth.html#lancamentos">Lançamentos</a>
+            <a href="fifth.html#promocoes">Promoções</a>
+            <a href="fifth.html#sobre">Sobre Nós</a>
+        </nav>
+
+        <div class="header-icons">
+            <button class="icon-button" id="btn-search" aria-label="Pesquisar">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+
+            <a href="produtos.html" class="icon-button" aria-label="Sacola">
+                <i class="fa-solid fa-bag-shopping"></i>
+            </a>
+
+            <a href="fifth.html#sobre" class="icon-button" aria-label="Perfil">
+                <i class="fa-regular fa-user"></i>
+            </a>
+        </div>
+
+    </header>
+
+    <!-- Pesquisa -->
+    <div class="search-area" id="search-area">
+        <input type="search" id="search-input" placeholder="O que você procura?">
+        <button id="search-submit" aria-label="Buscar">
+            <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
+    </div>
+
+    <main>
+
+        <!-- Título da página -->
+        <section class="page-title">
+            <span class="eyebrow">DESCUBRA SEUS FAVORITOS</span>
+            <h1>Nossos produtos</h1>
+            <p>Encontre produtos para deixar sua rotina ainda mais especial.</p>
+        </section>
+
+        <!-- Catálogo de produtos -->
+        <section class="products-section catalog">
+
+            <div class="section-heading">
+                <h2>Todos os produtos</h2>
+                <span class="product-count" id="product-count">8 produtos</span>
+            </div>
+
+            <!-- Filtros por categoria -->
+            <div class="category-filters">
+                <button class="filter-button active" data-filter="todos">Todos</button>
+                <button class="filter-button" data-filter="pele">Cuidados com a pele</button>
+                <button class="filter-button" data-filter="maquiagem">Maquiagem</button>
+                <button class="filter-button" data-filter="perfumaria">Perfumaria</button>
+            </div>
+
+            <div class="product-grid catalog-grid">
+
+                <article class="product-card" data-name="Sérum facial" data-category="pele">
+                    <div class="product-image">
+                        <img src="assets/produto-1.jpg" alt="Sérum facial">
+                        <span class="product-tag">Mais vendido</span>
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">Cuidados com a pele</span>
+                        <h3>Sérum Facial</h3>
+                        <p class="price">R$ 59,90</p>
+                        <button class="add-button" data-product="Sérum Facial">Adicionar à sacola</button>
+                    </div>
+                </article>
+
+                <article class="product-card" data-name="Hidratante corporal" data-category="pele">
+                    <div class="product-image">
+                        <img src="assets/produto-2.jpg" alt="Hidratante corporal">
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">Cuidados com a pele</span>
+                        <h3>Hidratante Corporal</h3>
+                        <p class="price">R$ 49,90</p>
+                        <button class="add-button" data-product="Hidratante Corporal">Adicionar à sacola</button>
+                    </div>
+                </article>
+
+                <article class="product-card" data-name="Gloss labial" data-category="maquiagem">
+                    <div class="product-image">
+                        <img src="assets/produto-3.jpg" alt="Gloss labial">
+                        <span class="product-tag">Novidade</span>
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">Maquiagem</span>
+                        <h3>Gloss Labial</h3>
+                        <p class="price">R$ 29,90</p>
+                        <button class="add-button" data-product="Gloss Labial">Adicionar à sacola</button>
+                    </div>
+                </article>
+
+                <article class="product-card" data-name="Perfume feminino" data-category="perfumaria">
+                    <div class="product-image">
+                        <img src="assets/produto-4.jpg" alt="Perfume feminino">
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">Perfumaria</span>
+                        <h3>Perfume Feminino</h3>
+                        <p class="price">R$ 89,90</p>
+                        <button class="add-button" data-product="Perfume Feminino">Adicionar à sacola</button>
+                    </div>
+                </article>
+
+                <article class="product-card" data-name="Creme facial" data-category="pele">
+                    <div class="product-image">
+                        <img src="assets/produto-1.jpg" alt="Creme facial">
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">Cuidados com a pele</span>
+                        <h3>Creme Facial</h3>
+                        <p class="price">R$ 39,90</p>
+                        <button class="add-button" data-product="Creme Facial">Adicionar à sacola</button>
+                    </div>
+                </article>
+
+                <article class="product-card" data-name="Batom rosado" data-category="maquiagem">
+                    <div class="product-image">
+                        <img src="assets/produto-3.jpg" alt="Batom rosado">
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">Maquiagem</span>
+                        <h3>Batom Rosado</h3>
+                        <p class="price">R$ 34,90</p>
+                        <button class="add-button" data-product="Batom Rosado">Adicionar à sacola</button>
+                    </div>
+                </article>
+
+                <article class="product-card" data-name="Body splash" data-category="perfumaria">
+                    <div class="product-image">
+                        <img src="assets/produto-4.jpg" alt="Body splash">
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">Perfumaria</span>
+                        <h3>Body Splash</h3>
+                        <p class="price">R$ 69,90</p>
+                        <button class="add-button" data-product="Body Splash">Adicionar à sacola</button>
+                    </div>
+                </article>
+
+                <article class="product-card" data-name="Máscara facial" data-category="pele">
+                    <div class="product-image">
+                        <img src="assets/produto-2.jpg" alt="Máscara facial">
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">Cuidados com a pele</span>
+                        <h3>Máscara Facial</h3>
+                        <p class="price">R$ 24,90</p>
+                        <button class="add-button" data-product="Máscara Facial">Adicionar à sacola</button>
+                    </div>
+                </article>
+
+            </div>
+
+            <p class="search-feedback" id="search-feedback"></p>
+
+        </section>
+
+    </main>
+
+    <!-- Rodapé -->
+    <footer class="footer">
+
+        <div class="footer-content">
+
+            <div class="footer-brand">
+                <a href="fifth.html" class="logo">Fifth Bloom<span>.</span></a>
+                <p>Beleza, cuidado e delicadeza em cada detalhe.</p>
+            </div>
+
+            <div class="footer-links">
+                <h3>Navegação</h3>
+                <a href="fifth.html">Início</a>
+                <a href="produtos.html">Produtos</a>
+                <a href="fifth.html#promocoes">Promoções</a>
+                <a href="fifth.html#sobre">Sobre nós</a>
+            </div>
+
+            <div class="footer-social">
+                <h3>Redes sociais</h3>
+                <a href="#"><i class="fa-brands fa-instagram"></i> Instagram</a>
+                <a href="#"><i class="fa-brands fa-pinterest"></i> Pinterest</a>
+            </div>
+
+            <div class="footer-newsletter">
+                <h3>Receba novidades</h3>
+                <p>Fique por dentro das novidades da Fifth Bloom.</p>
+                <form id="newsletter-form">
+                    <input type="email" placeholder="Seu e-mail" required>
+                    <button type="submit">Enviar</button>
+                </form>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            <p>© <span id="ano"></span> Fifth Bloom. Todos os direitos reservados.</p>
+        </div>
+
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/script.js"></script>
+
 </body>
 </html>
